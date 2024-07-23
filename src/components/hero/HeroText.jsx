@@ -7,7 +7,7 @@ export function HeroText() {
       <div className={classes.inner}>
         <Container p={0} size={600}>
           <Avatar
-            src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png"
+            src="./bemoji.png"
             size={220}
             radius={80}
             mx="auto"

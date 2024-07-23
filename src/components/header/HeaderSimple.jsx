@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { Container, Group, Burger } from '@mantine/core';
+
+import { IconBrandTwitter, IconBrandLinkedin } from '@tabler/icons-react';
+
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderSimple.module.css';
 import myLogo from '/TA.svg';
 
 const links = [
-  { link: '/about', label: 'Features' },
-  { link: '/pricing', label: 'Pricing' },
-  { link: '/learn', label: 'Learn' },
-  { link: '/community', label: 'Community' },
+  { link: '/about', label: 'About' },
+  { link: '/contact', label: 'Contact Me' },
 ];
 
 export function HeaderSimple() {
@@ -28,6 +29,7 @@ export function HeaderSimple() {
     >
       {link.label}
     </a>
+  
   ));
 
   return (
@@ -37,7 +39,15 @@ export function HeaderSimple() {
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
-
+        <Group gap={5} visibleFrom="xs">
+          <a href='https://www.linkedin.com/in/tmagostinho' target="_blank">
+            <IconBrandLinkedin stroke={2} />
+          </a>
+          <a href='https://x.com/TiagoAgost85854' target="_blank">
+            <IconBrandTwitter stroke={2} />
+          </a>
+        </Group>
+        
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
     </header>

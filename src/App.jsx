@@ -1,18 +1,17 @@
-import { useState } from 'react'
 import { HeaderSimple } from './components/header/HeaderSimple'
 import { HeroText } from './components/hero/HeroText'
+import {FooterSocial} from './components/footer/FooterSocial'
 
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <MantineProvider>
       <HeaderSimple />
       <HeroText />
-      
+      <FooterSocial />
     </MantineProvider>
   )
 }

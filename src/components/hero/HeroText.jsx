@@ -23,7 +23,7 @@ export function HeroText() {
           <Text component="span" className={classes.highlight} inherit>
             web experiences
           </Text>{' '}
-          with Top-Tier React Development
+            with Top-Tier React Development
         </Title>
         <div className={classes.controls}>
           <Button className={classes.control} size="lg" variant="default" color="gray">

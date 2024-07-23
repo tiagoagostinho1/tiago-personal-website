@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Container, Group, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderSimple.module.css';
+import myLogo from '/TA.svg';
 
 const links = [
   { link: '/about', label: 'Features' },
@@ -32,6 +33,7 @@ export function HeaderSimple() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
+        <img src={myLogo} className="logo" alt="Tiago Agostinho logo" height={32} />
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>

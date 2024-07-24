@@ -5,11 +5,11 @@ import { IconBrandTwitter, IconBrandLinkedin } from '@tabler/icons-react';
 
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderSimple.module.css';
-import myLogo from '/TA.svg';
+import { MyLogo } from '../MyLogo'
 
 const links = [
-  { link: '/about', label: 'About' },
-  { link: '/contact', label: 'Contact Me' },
+  { link: '#about', label: 'About' },
+  { link: '#contact', label: 'Contact Me' },
 ];
 
 export function HeaderSimple() {
@@ -23,7 +23,7 @@ export function HeaderSimple() {
       className={classes.link}
       data-active={active === link.link || undefined}
       onClick={(event) => {
-        event.preventDefault();
+        //event.preventDefault();
         setActive(link.link);
       }}
     >
@@ -35,7 +35,7 @@ export function HeaderSimple() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <img src={myLogo} className="logo" alt="Tiago Agostinho logo" height={32} />
+        <MyLogo size={32} />
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
@@ -47,7 +47,6 @@ export function HeaderSimple() {
             <IconBrandTwitter stroke={2} />
           </a>
         </Group>
-        
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
     </header>

@@ -22,7 +22,7 @@ import {
     ));
   
     return (
-      <div className={classes.wrapper}>
+      <div id='contact' className={classes.wrapper}>
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={50}>
           <div>
             <Title className={classes.title}>Contact us</Title>
